@@ -1,0 +1,9 @@
+
+exec_always pavucontrol
+for_window [title="^Volume Control$"] floating enable
+for_window [title="^Volume Control$"] border pixel 0
+for_window [title="^Volume Control$"] resize set 350 200
+for_window [title="^Volume Control$"] move absolute position 1570 31
+for_window [title="^Volume Control$"] move scratchpad
+
+bindsym $mod+o [title="^Volume Control$"] scratchpad show

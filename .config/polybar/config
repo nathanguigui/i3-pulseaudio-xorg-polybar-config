@@ -1,0 +1,12 @@
+
+[module/pavu]
+type = custom/script
+
+click-right = xdotool key super+o
+click-left = pactl list sinks | grep -q Mute:.no && pactl set-sink-mute 0 1 || pactl set-sink-mute 0 0
+
+exec = sh ~/.config/polybar/sound.sh
+exec-if = pgrep pavu
+interval = 0.5
+format-underline = #aa00aa
+format-suffix = "%"
